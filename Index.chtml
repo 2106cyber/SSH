@@ -1,0 +1,32 @@
+@model List<Books>
+
+<div class="card shadow">
+    <div class="card-header bg-primary text-white">
+        <h3 class="mb-0">Books List</h3>
+    </div>
+
+    <div class="card-body">
+        <table class="table table-bordered table-hover table-striped align-middle">
+            <thead class="table-dark text-center">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td class="text-center">@book.ID</td>
+                        <td>@book.Title</td>
+                        <td>@book.Price</td>
+                        <td>@book.Author</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
